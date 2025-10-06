@@ -7,9 +7,10 @@ export default function ProjectList() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const API = import.meta.env.VERCEL_API_URL || import.meta.env.API_URL || "http://localhost:5000/";
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/projects")
+    axios.get(`${API}api/projects`)
       .then(res => {
         setProjects(res.data);
         setError(null);

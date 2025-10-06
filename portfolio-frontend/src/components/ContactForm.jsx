@@ -7,6 +7,8 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
   const [error, setError] = useState("");
+  const API = import.meta.env.VERCEL_API_URL || import.meta.env.API_URL || "http://localhost:5000/";
+
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -33,7 +35,7 @@ export default function ContactForm() {
     setLoading(true);
     setStatus("");
     try {
-      await axios.post("http://localhost:5000/api/contact", form);
+      await axios.post(`${API}/api/contact`, form);
       setSubmittedName(form.name);
       setStatus("success");
       setForm({ name: "", email: "", message: "", number: "" });
