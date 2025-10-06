@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
   const [error, setError] = useState("");
-  const API = import.meta.env.VERCEL_API_URL || import.meta.env.API_URL || "http://localhost:5000/";
+  const API = import.meta.env.API_URL || "https://portfolio-website-wnt4.vercel.app/" || "http://localhost:5000/" ;
 
 
   const handleChange = (e) => {
