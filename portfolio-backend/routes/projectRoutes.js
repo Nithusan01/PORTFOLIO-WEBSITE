@@ -1,11 +1,11 @@
-const express = require('express');
-const Project = require("../models/Projects");
-const router = express.Router();
+import { Router } from 'express';
+import Project, { find } from "../models/Projects";
+const router = Router();
 
 // GET all projects
 router.get('/', async (req,res) => {
   try {
-     const project = await Project.find();
+     const project = await find();
     res.json(project);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -24,4 +24,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

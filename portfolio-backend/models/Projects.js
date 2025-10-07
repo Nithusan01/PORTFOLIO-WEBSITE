@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import { Schema, model } from 'mongoose';
 
-const projectSchema = new mongoose.Schema({
+const projectSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
   image: { type: String, required: true },
@@ -9,4 +9,4 @@ const projectSchema = new mongoose.Schema({
   codeUrl: { type: String }
 });
 
-module.exports = mongoose.model('Project', projectSchema);
+export default model('Project', projectSchema);

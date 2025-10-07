@@ -1,22 +1,22 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+import express, { json } from 'express';
+import { connect } from 'mongoose';
+import cors from 'cors';
 require('dotenv').config();
 
-const projectRoutes = require('./routes/projectRoutes');
-const contactRoutes = require('./routes/contactRoutes');
+import projectRoutes from './routes/projectRoutes';
+import contactRoutes from './routes/contactRoutes';
 
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+app.use(json());
 
 // Routes
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
 
 // Connect to MongoDB and start server
-mongoose.connect(process.env.MONGO_URI)
+connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB Connected');
     app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));

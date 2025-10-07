@@ -1,7 +1,7 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const Message = require('../models/Message');
-const router = express.Router();
+import { Router } from 'express';
+import { createTransport } from 'nodemailer';
+import Message from '../models/Message';
+const router = Router();
 require('dotenv').config();
 
 router.post('/', async (req, res) => {
@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
   const date = savedMessage.date.toLocaleString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
   try {
-    const transporter = nodemailer.createTransport({
+    const transporter = createTransport({
       service: 'gmail',
       auth: {
         user: process.env.MAIL_USER,
@@ -36,4 +36,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
