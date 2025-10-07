@@ -1,4 +1,4 @@
-import express, { json } from 'express';
+import express from 'express';
 import { connect } from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -11,7 +11,7 @@ import contactRoutes from './routes/contactRoutes.js';
 const app = express();
 
 app.use(cors());
-app.use(json());
+app.use(express.json());
 
 // Routes
 app.use('/api/projects', projectRoutes);
