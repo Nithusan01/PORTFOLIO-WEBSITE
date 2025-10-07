@@ -35,7 +35,7 @@ export default function ContactForm() {
     setLoading(true);
     setStatus("");
     try {
-      await axios.post(`${API}/api/contact`, form);
+      await axios.post("https://portfolio-website-wnt4.vercel.app/api/contact", form);
       setSubmittedName(form.name);
       setStatus("success");
       setForm({ name: "", email: "", message: "", number: "" });
