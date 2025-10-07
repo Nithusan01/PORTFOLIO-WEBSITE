@@ -10,7 +10,7 @@ export default function ProjectList() {
   const API =  "https://portfolio-website-wnt4.vercel.app/" ;
 
   useEffect(() => {
-    axios.get(`${API}api/projects`)
+    axios.get("https://portfolio-website-wnt4.vercel.app/api/projects")
       .then(res => {
         setProjects(res.data);
         setError(null);
