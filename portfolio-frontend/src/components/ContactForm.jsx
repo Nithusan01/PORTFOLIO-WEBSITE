@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
   const [error, setError] = useState("");
-  const API =  "https://portfolio-website-wnt4.vercel.app/" || "http://localhost:5000/" ;
+  const API =  "https://portfolio-website-wnt4.vercel.app/" ;
 
 
   const handleChange = (e) => {
