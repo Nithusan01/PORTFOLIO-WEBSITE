@@ -4,9 +4,9 @@ import { SiSpringboot, SiReact, SiMongodb, SiPython } from "react-icons/si";
 
 export const About = () => {
   const stats = [
-    { icon: <FaCode className="w-6 h-6" />, label: "Projects Completed", value: "20+" },
+    { icon: <FaCode className="w-6 h-6" />, label: "Projects Completed", value: "7+" },
     { icon: <FaGraduationCap className="w-6 h-6" />, label: "Years Learning", value: "3+" },
-    { icon: <FaLightbulb className="w-6 h-6" />, label: "Technologies", value: "15+" },
+    { icon: <FaLightbulb className="w-6 h-6" />, label: "Technologies", value: "10+" },
   ];
 
   const technologies = [
@@ -134,8 +134,8 @@ export const About = () => {
                 {[
                   { icon: <FaLinkedin className="w-6 h-6" />, label: "LinkedIn", href: "www.linkedin.com/in/balasubramaniam-nithusan-8482aa248", color: "hover:text-blue-600" },
                   { icon: <FaGithub className="w-6 h-6" />, label: "GitHub", href: "https://github.com/Nithusan01", color: "hover:text-gray-900 dark:hover:text-white" },
-                  { icon: <FaTwitter className="w-6 h-6" />, label: "Twitter", href: "https://twitter.com/nithusan_b", color: "hover:text-sky-400" },
-                  { icon: <FaInstagram className="w-6 h-6" />, label: "Instagram", href: "https://instagram.com/nithusan_b", color: "hover:text-pink-500" },
+                  { icon: <FaTwitter className="w-6 h-6" />, label: "Twitter", href: "https://x.com/nithusan01", color: "hover:text-sky-400" },
+                  { icon: <FaInstagram className="w-6 h-6" />, label: "Instagram", href: "https://www.instagram.com/nithusan_balasubramaniam?igsh=MTZiZWlpZWo0cTV2dQ==", color: "hover:text-pink-500" },
                   { icon: <FaEnvelope className="w-6 h-6" />, label: "Email", href: "mailto:b.nithusan01@gmail.com", color: "hover:text-red-500" },
                 ].map((social, index) => (
                   <a

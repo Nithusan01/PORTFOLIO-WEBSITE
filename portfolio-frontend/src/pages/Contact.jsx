@@ -115,7 +115,7 @@ const Contact = () => {
                 Let's schedule a call to discuss your project requirements and timeline.
               </p>
               <a
-                href="https://calendly.com/nithusan"
+                href="https://calendly.com/b-nithusan01/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-yellow-600 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
