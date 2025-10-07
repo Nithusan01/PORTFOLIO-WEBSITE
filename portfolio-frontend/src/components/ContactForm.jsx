@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
   const [error, setError] = useState("");
-  const API = import.meta.env.API_URL || "https://portfolio-website-wnt4.vercel.app/" || "http://localhost:5000/" ;
+  const API =  "https://portfolio-website-wnt4.vercel.app/" || "http://localhost:5000/" ;
 
 
   const handleChange = (e) => {
@@ -35,7 +35,7 @@ export default function ContactForm() {
     setLoading(true);
     setStatus("");
     try {
-      await axios.post("https://portfolio-website-wnt4.vercel.app/api/contact", form);
+      await axios.post(`${API}api/contact`, form);
       setSubmittedName(form.name);
       setStatus("success");
       setForm({ name: "", email: "", message: "", number: "" });
