@@ -1,11 +1,11 @@
 import Router  from 'express';
-import Project from "../models/Projects.js";
+import Project from "../models/project.js";
 const router = Router();
 
 // GET all projects
 router.get('/', async (req,res) => {
   try {
-     const project = await find();
+     const project = await Project.find();
     res.json(project);
   } catch (err) {
     res.status(500).json({ message: err.message });
