@@ -1,10 +1,12 @@
 import express, { json } from 'express';
 import { connect } from 'mongoose';
 import cors from 'cors';
-require('dotenv').config();
+import dotenv from 'dotenv';
 
-import projectRoutes from './routes/projectRoutes';
-import contactRoutes from './routes/contactRoutes';
+dotenv.config();
+
+import projectRoutes from './routes/projectRoutes.js';
+import contactRoutes from './routes/contactRoutes.js';
 
 const app = express();
 

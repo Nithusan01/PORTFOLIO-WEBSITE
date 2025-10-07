@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import Project, { find } from "../models/Projects";
+import Router  from 'express';
+import Project from "../models/Projects.js";
 const router = Router();
 
 // GET all projects

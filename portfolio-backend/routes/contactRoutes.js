@@ -1,8 +1,9 @@
-import { Router } from 'express';
-import { createTransport } from 'nodemailer';
-import Message from '../models/Message';
+import Router  from 'express';
+import createTransport  from 'nodemailer';
+import Message from '../models/Message.js';
+import dotenv from 'dotenv';
 const router = Router();
-require('dotenv').config();
+dotenv.config();
 
 router.post('/', async (req, res) => {
   const { name, email, message,number } = req.body;
