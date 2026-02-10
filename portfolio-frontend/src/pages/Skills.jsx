@@ -134,14 +134,14 @@ export const Skills = () => {
 
         {/* Skills Grid */}
         <div
-          className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 transition-all duration-500 ${
+          className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6  justify-items-center transition-all duration-500 ${
             fade ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >
           {skillCategories[category].map((skill, index) => (
             <div
               key={index}
-              className="group relative p-6 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
+              className="group relative  p-6 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
               style={{
                 transitionDelay: `${index * 100}ms`
               }}
