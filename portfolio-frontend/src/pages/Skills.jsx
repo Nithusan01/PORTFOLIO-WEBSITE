@@ -17,7 +17,11 @@ import {
   SiNodedotjs,
   SiPython,
   SiPostgresql,
-  SiRedis
+  SiRedis,
+   SiPostman,
+  SiGithub,
+  SiVercel,
+  SiLinux
 } from "react-icons/si";
 
 export const Skills = () => {
@@ -50,9 +54,19 @@ export const Skills = () => {
      
     ],
     tools: [
-      { icon: <FaGitAlt className="w-16 h-16" />, name: "Git", color: "text-orange-600", bg: "bg-orange-600/10" },
-      { icon: <FaDatabase className="w-16 h-16" />, name: "SQL", color: "text-purple-500", bg: "bg-purple-500/10" },
-    ],
+  { icon: <FaGitAlt className="w-16 h-16" />, name: "Git", color: "text-orange-600", bg: "bg-orange-600/10" },
+
+  { icon: <FaDatabase className="w-16 h-16" />, name: "SQL", color: "text-purple-500", bg: "bg-purple-500/10" },
+
+  { icon: <SiPostman className="w-16 h-16" />, name: "Postman", color: "text-orange-500", bg: "bg-orange-500/10" },
+
+  { icon: <SiGithub className="w-16 h-16" />, name: "GitHub", color: "text-gray-800 dark:text-white", bg: "bg-gray-800/10" },
+
+  { icon: <SiVercel className="w-16 h-16" />, name: "Vercel", color: "text-black dark:text-white", bg: "bg-black/10" },
+
+  
+]
+
   };
 
   const handleCategoryChange = (cat) => {
