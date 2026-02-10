@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function Hero() {
   const name = "Nithusan";
-  const professions = ["Software Engineer", "Web Developer", "ML Enthusiast"];
+  const professions = ["Software developer", "AI & IOT ", "Robotics Enthusiast"];
   const [text, setText] = useState("");
   const [professionIndex, setProfessionIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
