@@ -11,8 +11,7 @@ function App() {
   return (
     <Router>
       <Helmet>
-        <meta name="google-site-verification" content="abc123xyz456" />
-      </Helmet>
+<meta name="google-site-verification" content="doEntOEimw1KZJZoGZVc4SktsAKrJraQPkwrHuznwAs" />      </Helmet>
 
       <Header />
 
