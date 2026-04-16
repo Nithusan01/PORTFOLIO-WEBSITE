@@ -5,13 +5,15 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import "./App.css";
 import Contact from "./pages/Contact";
+import AdminDashboard from "./pages/AdminDashboard";
 import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <Router>
       <Helmet>
-     <meta name="google-site-verification" content="doEntOEimw1git statusKZJZoGZVc4SktsAKrJraQPkwrHuznwAs" />      </Helmet>
+        <meta name="google-site-verification" content="doEntOEimw1git statusKZJZoGZVc4SktsAKrJraQPkwrHuznwAs" />
+      </Helmet>
 
       <Header />
 
@@ -20,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Contact />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin7124243" element={<AdminDashboard />} />
         </Routes>
       </main>
 

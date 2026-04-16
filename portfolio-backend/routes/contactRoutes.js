@@ -7,6 +7,29 @@ dotenv.config();
 
 const router = express.Router();
 
+// GET all messages (for admin dashboard)
+router.get('/', async (req, res) => {
+  try {
+    const messages = await Message.find().sort({ date: -1 }); // Newest first
+    res.status(200).json(messages);
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Failed to fetch messages', error: err.message });
+  }
+});
+
+// DELETE a message
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedMessage = await Message.findByIdAndDelete(req.params.id);
+    if (!deletedMessage) {
+      return res.status(404).json({ success: false, message: 'Message not found' });
+    }
+    res.status(200).json({ success: true, message: 'Message deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Failed to delete message', error: err.message });
+  }
+});
+
 router.post('/', async (req, res) => {
   try {
     const { name, email, message, number } = req.body;
@@ -22,25 +45,25 @@ router.post('/', async (req, res) => {
 
     const date = savedMessage.date
       ? savedMessage.date.toLocaleString('en-US', {
-          day: '2-digit',
-          month: '2-digit',
-          year: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-        })
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      })
       : new Date().toLocaleString();
 
     // Mail setup
-   const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true, // true for 465, false for 587
-  auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
-  },
-});
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // true for 465, false for 587
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+    });
 
 
     const mailOptions = {
