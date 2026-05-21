@@ -9,7 +9,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
-  const navItems = ["Home", "projects", "skills", "contact", "about"];
+  const navItems = ["Home", "projects", "skills", "experience", "contact", "about"];
 
   // Initialize dark mode from system preference or localStorage
   useEffect(() => {

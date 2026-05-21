@@ -4,6 +4,7 @@ import Contact from "./Contact";
 import ProjectList from "../components/ProjectList";
 import { About } from "./About";
 import { Skills } from "./Skills";
+import { Experience } from "../components/Experience";
 
 export default function Home() {
 
@@ -21,6 +22,10 @@ export default function Home() {
             <section id="skills">
             <Skills/>
             </section>
+
+            <section id="experience">
+            <Experience/>
+            </section>
             
             <section id="contact">
                 <Contact/>
@@ -33,3 +38,4 @@ export default function Home() {
 
     );
 }
+
