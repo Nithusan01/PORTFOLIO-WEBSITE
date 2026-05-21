@@ -1,74 +1,74 @@
 import React, { useState } from "react";
-import { 
-  FaGraduationCap, 
-  FaRobot, 
-  FaMicrochip, 
-  FaLaptopCode, 
-  FaCalendarAlt, 
-  FaAward, 
-  FaCheckCircle 
+import {
+  FaGraduationCap,
+  FaRobot,
+  FaMicrochip,
+  FaLaptopCode,
+  FaCalendarAlt,
+  FaAward,
+  FaCheckCircle
 } from "react-icons/fa";
 
 export const Experience = () => {
   const [filter, setFilter] = useState("all");
 
   const experiences = [
-   {
-  id: 1,
-  type: "Research and Development Intern",
-  title: "Software Developer Intern",
-  organization: "SLT Digital Lab · Sri Lanka Telecom PLC",
-  period: "2025 - Present",
-  icon: <FaRobot className="w-6 h-6" />,
-  color: "text-red-500",
-  bg: "bg-red-500/10",
-  border: "border-red-500/30",
-  glow: "group-hover:shadow-red-500/20",
-  description: "Developing a production-grade wire sag monitoring application for telecom infrastructure, combining full-stack development with engineering calculations.",
-  details: [
-    "Building responsive frontend interfaces with React.js and Tailwind CSS, and implementing backend services using Node.js and Express.js.",
-    "Collaborating with cross-functional R&D teams to translate domain-specific requirements into scalable software features.",
-    "Integrating real-time data visualization and reporting modules to assist field engineers in maintenance decisions."
-  ],
-  tags: ["React.js", "Tailwind CSS", "Node.js", "Express.js"]
-},
-{
-  id: 2,
-  type: "Full-Stack Developer Intern",
-  title: "Full-Stack Developer",
-  organization: "Speed IT Net",
-  period: "2025 - 2026",
-  icon: <FaMicrochip className="w-6 h-6" />,
-  color: "text-green-500",
-  bg: "bg-green-500/10",
-  border: "border-green-500/30",
-  glow: "group-hover:shadow-green-500/20",
-  description: "Collaborated within a cross-functional team to develop a real-time IoT monitoring dashboard, reducing data latency between sensors and the web interface.",
-  details: [
-    "Built real-time IoT dashboard using React.js and Socket.io for low-latency sensor-to-UI data flow.",
-    "Designed and integrated secure RESTful APIs with JWT authentication for encrypted communication between hardware nodes and the application backend.",
-    "Contributed to database architecture using PostgreSQL and Node.js, ensuring data integrity and efficient query performance."
-  ],
-  tags: ["React.js", "Socket.io", "Node.js", "PostgreSQL", "JWT"]
-},
-{
-  id: 3,
-  type: "IoT & Embedded Systems Intern",
-  title: "Embedded Systems Developer",
-  organization: "Innovay",
-  period: "Feb 2026 - May 2026",
-  icon: <FaGraduationCap className="w-6 h-6" />,
-  color: "text-amber-500",
-  bg: "bg-amber-500/10",
-  border: "border-amber-500/30",
-  glow: "group-hover:shadow-amber-500/20",
-  description: "Working within a project team to design an embedded system for an Automated Aquarium Monitoring & Control System, tracking water parameters and implementing automated actuator control logic.",
-  details: [
-    "Designing hardware and firmware for real-time water parameter monitoring (temperature, pH, turbidity).",
-    "Implementing automated actuator control logic for pumps, heaters, and lighting based on sensor thresholds."
-  ],
-  tags: ["Embedded C", "ESP32", "IoT", "Sensors"]
-},
+    {
+      id: 1,
+      type: "Research and Development Intern",
+      title: "Software Developer Intern",
+      organization: "SLT Digital Lab · Sri Lanka Telecom PLC",
+      period: "2025 - 2026",
+      icon: <FaRobot className="w-6 h-6" />,
+      color: "text-red-500",
+      bg: "bg-red-500/10",
+      border: "border-red-500/30",
+      glow: "group-hover:shadow-red-500/20",
+      description: "Developing a production-grade wire sag monitoring application for telecom infrastructure, combining full-stack development with engineering calculations.",
+      details: [
+        "Building responsive frontend interfaces with React.js and Tailwind CSS, and implementing backend services using Node.js and Express.js.",
+        "Collaborating with cross-functional R&D teams to translate domain-specific requirements into scalable software features.",
+        "Integrating real-time data visualization and reporting modules to assist field engineers in maintenance decisions."
+      ],
+      tags: ["React.js", "Tailwind CSS", "Node.js", "Express.js"]
+    },
+    {
+      id: 2,
+      type: "Full-Stack Developer Intern",
+      title: "Full-Stack Developer",
+      organization: "Speed IT Net",
+      period: "august 2025 - february 2026",
+      icon: <FaMicrochip className="w-6 h-6" />,
+      color: "text-green-500",
+      bg: "bg-green-500/10",
+      border: "border-green-500/30",
+      glow: "group-hover:shadow-green-500/20",
+      description: "Collaborated within a cross-functional team to develop a real-time IoT monitoring dashboard, reducing data latency between sensors and the web interface.",
+      details: [
+        "Built real-time IoT dashboard using React.js and Socket.io for low-latency sensor-to-UI data flow.",
+        "Designed and integrated secure RESTful APIs with JWT authentication for encrypted communication between hardware nodes and the application backend.",
+        "Contributed to database architecture using PostgreSQL and Node.js, ensuring data integrity and efficient query performance."
+      ],
+      tags: ["React.js", "Socket.io", "Node.js", "PostgreSQL", "JWT"]
+    },
+    {
+      id: 3,
+      type: "IoT & Embedded Systems Intern",
+      title: "Embedded Systems Developer",
+      organization: "Innovay",
+      period: "Feb 2026 - May 2026",
+      icon: <FaGraduationCap className="w-6 h-6" />,
+      color: "text-amber-500",
+      bg: "bg-amber-500/10",
+      border: "border-amber-500/30",
+      glow: "group-hover:shadow-amber-500/20",
+      description: "Working within a project team to design an embedded system for an Automated Aquarium Monitoring & Control System, tracking water parameters and implementing automated actuator control logic.",
+      details: [
+        "Designing hardware and firmware for real-time water parameter monitoring (temperature, pH, turbidity).",
+        "Implementing automated actuator control logic for pumps, heaters, and lighting based on sensor thresholds."
+      ],
+      tags: ["Embedded C", "ESP32", "IoT", "Sensors"]
+    },
     // {
     //   id: 4,
     //   type: "software",
@@ -106,7 +106,7 @@ export const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 dark:bg-yellow-900/30 border border-yellow-200 dark:border-yellow-800 text-yellow-700 dark:text-yellow-300 text-sm font-medium mb-4">
@@ -127,11 +127,10 @@ export const Experience = () => {
             <button
               key={cat.value}
               onClick={() => setFilter(cat.value)}
-              className={`relative px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${
-                filter === cat.value
+              className={`relative px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${filter === cat.value
                   ? "bg-gradient-to-r from-yellow-500 to-amber-500 text-white shadow-lg shadow-yellow-500/25"
                   : "bg-white/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
-              }`}
+                }`}
             >
               {cat.label}
             </button>
@@ -148,11 +147,10 @@ export const Experience = () => {
             {filteredExperiences.map((exp, index) => {
               const isEven = index % 2 === 0;
               return (
-                <div 
-                  key={exp.id} 
-                  className={`flex flex-col md:flex-row items-stretch md:justify-between relative ${
-                    isEven ? "md:flex-row-reverse" : ""
-                  }`}
+                <div
+                  key={exp.id}
+                  className={`flex flex-col md:flex-row items-stretch md:justify-between relative ${isEven ? "md:flex-row-reverse" : ""
+                    }`}
                 >
                   {/* Timeline point */}
                   <div className="absolute left-8 md:left-1/2 top-6 w-8 h-8 rounded-full border-4 border-white dark:border-gray-900 shadow-md flex items-center justify-center transform -translate-x-1/2 z-20 bg-yellow-500 text-white animate-pulse">
@@ -165,7 +163,7 @@ export const Experience = () => {
                   {/* Experience Card */}
                   <div className="w-full md:w-[calc(50%-2rem)] pl-16 md:pl-0">
                     <div className={`group relative p-6 sm:p-8 rounded-3xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-yellow-400/30 dark:hover:border-yellow-500/30 overflow-hidden ${exp.glow}`}>
-                      
+
                       {/* Decorative corner shape */}
                       <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden">
                         <div className={`absolute top-0 right-0 w-12 h-12 transform rotate-45 translate-x-6 -translate-y-6 opacity-20 group-hover:opacity-40 transition-opacity duration-500 bg-gradient-to-br from-yellow-400 to-amber-500`} />
