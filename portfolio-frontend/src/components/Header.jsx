@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaEnvelope, FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 
 const Header = () => {
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState("Home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,6 +53,11 @@ const Header = () => {
       setMobileMenuOpen(false);
     }
   };
+
+  // Hide header on admin dashboard
+  if (location.pathname.startsWith('/admin')) {
+    return null;
+  }
 
   return (
     <header className={`fixed top-0 left-0 w-full py-4 px-6 lg:px-8 z-50 transition-all duration-500 ${

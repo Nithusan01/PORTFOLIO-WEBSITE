@@ -136,7 +136,7 @@ const AdminDashboard = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Admin Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-600 dark:text-white pt-12">Admin Dashboard</h1>
         </div>
 
         {/* Tab Controls */}
