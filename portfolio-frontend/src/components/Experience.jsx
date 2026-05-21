@@ -13,83 +13,81 @@ export const Experience = () => {
   const [filter, setFilter] = useState("all");
 
   const experiences = [
-    {
-      id: 1,
-      type: "research",
-      title: "Lead Machine Learning Researcher",
-      organization: "University of Kelaniya",
-      period: "July 2024 - Present",
-      icon: <FaGraduationCap className="w-6 h-6" />,
-      color: "text-amber-500",
-      bg: "bg-amber-500/10",
-      border: "border-amber-500/30",
-      glow: "group-hover:shadow-amber-500/20",
-      description: "Designed a hybrid Bi-LSTM + GRU machine learning model that achieved 97.6% accuracy in predicting cryptocurrency prices for SOL, ADA, and XRP. Solved high-dimensional prediction challenges using deep learning techniques.",
-      details: [
-        "Integrated CryptoBERT and VADER models for advanced financial sentiment analysis from social media and news feeds.",
-        "Implemented metadata-based fake news detection algorithms to filter noise in input pipelines.",
-        "Built and evaluated the complete data pipeline using Python, TensorFlow, PyTorch, Hugging Face, Flask, and scikit-learn."
-      ],
-      tags: ["Python", "TensorFlow", "PyTorch", "Hugging Face", "Flask", "scikit-learn"]
-    },
-    {
-      id: 2,
-      type: "robotics",
-      title: "Robotics Engineer & Team Lead (Battle Bot)",
-      organization: "Robotics Club, University of Kelaniya",
-      period: "Aug 2023 - Apr 2024",
-      icon: <FaRobot className="w-6 h-6" />,
-      color: "text-red-500",
-      bg: "bg-red-500/10",
-      border: "border-red-500/30",
-      glow: "group-hover:shadow-red-500/20",
-      description: "Designed and built a 15 kg combat robot with a high-torque drivetrain and custom pneumatic/active weapon systems. Managed budget, component sourcing, and design cycles.",
-      details: [
-        "Champion – Robo Battle, University of Kelaniya: Secured 1st place in the prestigious inter-university robotic combat competition.",
-        "4th Place & Best Player – IROBEX, NiBM: Led the battle bot team to the Top 4 and received the Best Player award for strategic remote control under high pressure.",
-        "Master of Destruction – Electro Combat, University of Jayewardenepura: Won the award for developing the most powerful and destructive bot design in the knockout rounds.",
-        "Configured full RC control via FlySky i6X and iA6B receiver for independent drive and weapon channels."
-      ],
-      tags: ["SolidWorks", "FlySky RC", "Planetary Gears", "Brushed ESCs", "DC Motors"]
-    },
-    {
-      id: 3,
-      type: "iot",
-      title: "IoT Solutions Developer (Energy Meter)",
-      organization: "Academic Project",
-      period: "Mar 2023 - Jul 2023",
-      icon: <FaMicrochip className="w-6 h-6" />,
-      color: "text-green-500",
-      bg: "bg-green-500/10",
-      border: "border-green-500/30",
-      glow: "group-hover:shadow-green-500/20",
-      description: "Designed and implemented a smart IoT-based electricity energy consumption monitoring system using microcontrollers and cloud sync for real-time power analytics.",
-      details: [
-        "Developed a hardware prototype using an ESP32 microcontroller, voltage sensors, and current sensors to read electricity metrics.",
-        "Transmitted real-time sensor streams securely to Google Firebase Realtime Database.",
-        "Built a cross-platform mobile application in Flutter (Dart) displaying live usage, cost estimation, and automated billing alerts."
-      ],
-      tags: ["Flutter", "Firebase", "ESP32", "Embedded C", "Sensors"]
-    },
-    {
-      id: 4,
-      type: "software",
-      title: "Full-Stack Web Developer",
-      organization: "Independent Projects",
-      period: "Nov 2022 - Feb 2023",
-      icon: <FaLaptopCode className="w-6 h-6" />,
-      color: "text-cyan-500",
-      bg: "bg-cyan-500/10",
-      border: "border-cyan-500/30",
-      glow: "group-hover:shadow-cyan-500/20",
-      description: "Developed several complete full-stack web applications combining fast responsive frontends with robust backend architectures.",
-      details: [
-        "Movie Review & Recommendation Application: Built using React (frontend), Spring Boot (backend), and MongoDB for relational metadata and reviews.",
-        "Developed and optimized RESTful APIs for efficient data fetching, paging, and filtration.",
-        "Implemented JWT-based secure authentication, routing, and backend request authorization handlers."
-      ],
-      tags: ["React JS", "Spring Boot", "MongoDB", "Tailwind CSS", "JWT", "REST APIs"]
-    }
+   {
+  id: 1,
+  type: "Research and Development Intern",
+  title: "Software Developer Intern",
+  organization: "SLT Digital Lab · Sri Lanka Telecom PLC",
+  period: "2025 - Present",
+  icon: <FaRobot className="w-6 h-6" />,
+  color: "text-red-500",
+  bg: "bg-red-500/10",
+  border: "border-red-500/30",
+  glow: "group-hover:shadow-red-500/20",
+  description: "Developing a production-grade wire sag monitoring application for telecom infrastructure, combining full-stack development with engineering calculations.",
+  details: [
+    "Building responsive frontend interfaces with React.js and Tailwind CSS, and implementing backend services using Node.js and Express.js.",
+    "Collaborating with cross-functional R&D teams to translate domain-specific requirements into scalable software features.",
+    "Integrating real-time data visualization and reporting modules to assist field engineers in maintenance decisions."
+  ],
+  tags: ["React.js", "Tailwind CSS", "Node.js", "Express.js"]
+},
+{
+  id: 2,
+  type: "Full-Stack Developer Intern",
+  title: "Full-Stack Developer",
+  organization: "Speed IT Net",
+  period: "2025 - 2026",
+  icon: <FaMicrochip className="w-6 h-6" />,
+  color: "text-green-500",
+  bg: "bg-green-500/10",
+  border: "border-green-500/30",
+  glow: "group-hover:shadow-green-500/20",
+  description: "Collaborated within a cross-functional team to develop a real-time IoT monitoring dashboard, reducing data latency between sensors and the web interface.",
+  details: [
+    "Built real-time IoT dashboard using React.js and Socket.io for low-latency sensor-to-UI data flow.",
+    "Designed and integrated secure RESTful APIs with JWT authentication for encrypted communication between hardware nodes and the application backend.",
+    "Contributed to database architecture using PostgreSQL and Node.js, ensuring data integrity and efficient query performance."
+  ],
+  tags: ["React.js", "Socket.io", "Node.js", "PostgreSQL", "JWT"]
+},
+{
+  id: 3,
+  type: "IoT & Embedded Systems Intern",
+  title: "Embedded Systems Developer",
+  organization: "Innovay",
+  period: "Feb 2026 - May 2026",
+  icon: <FaGraduationCap className="w-6 h-6" />,
+  color: "text-amber-500",
+  bg: "bg-amber-500/10",
+  border: "border-amber-500/30",
+  glow: "group-hover:shadow-amber-500/20",
+  description: "Working within a project team to design an embedded system for an Automated Aquarium Monitoring & Control System, tracking water parameters and implementing automated actuator control logic.",
+  details: [
+    "Designing hardware and firmware for real-time water parameter monitoring (temperature, pH, turbidity).",
+    "Implementing automated actuator control logic for pumps, heaters, and lighting based on sensor thresholds."
+  ],
+  tags: ["Embedded C", "ESP32", "IoT", "Sensors"]
+},
+    // {
+    //   id: 4,
+    //   type: "software",
+    //   title: "Full-Stack Web Developer",
+    //   organization: "Independent Projects",
+    //   period: "Nov 2022 - Feb 2023",
+    //   icon: <FaLaptopCode className="w-6 h-6" />,
+    //   color: "text-cyan-500",
+    //   bg: "bg-cyan-500/10",
+    //   border: "border-cyan-500/30",
+    //   glow: "group-hover:shadow-cyan-500/20",
+    //   description: "Developed several complete full-stack web applications combining fast responsive frontends with robust backend architectures.",
+    //   details: [
+    //     "Movie Review & Recommendation Application: Built using React (frontend), Spring Boot (backend), and MongoDB for relational metadata and reviews.",
+    //     "Developed and optimized RESTful APIs for efficient data fetching, paging, and filtration.",
+    //     "Implemented JWT-based secure authentication, routing, and backend request authorization handlers."
+    //   ],
+    //   tags: ["React JS", "Spring Boot", "MongoDB", "Tailwind CSS", "JWT", "REST APIs"]
+    // }
   ];
 
   const categories = [
