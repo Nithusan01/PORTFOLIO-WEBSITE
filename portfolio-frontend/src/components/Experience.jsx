@@ -122,7 +122,7 @@ export const Experience = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center flex-wrap gap-3 mb-16">
+        {/* <div className="flex justify-center flex-wrap gap-3 mb-16">
           {categories.map((cat) => (
             <button
               key={cat.value}
@@ -135,7 +135,7 @@ export const Experience = () => {
               {cat.label}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Timeline container */}
         <div className="relative">
